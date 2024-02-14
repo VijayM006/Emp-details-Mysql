@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style1.css')}}">
+    <link rel="stylesheet" type="text/css" hef="{{url_for('static',filename='stylenav.css')}}"
+    <style>
+        table{
+            background-color: pink;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('Signup')}}">Signup</a></li>
+        <li><a href="{{url_for('add')}}">Add</a></li>
+      </ul>
+    <a href="{{url_for('login')}}">
+        <button>Login</button>
+    </a>
+    <a href="{{url_for('add')}}">
+        <button>Add </button>
+    </a>
+    <form method="post">
+        <label for="Name">Emp Name</label>
+        <input type="text" name="Name" placeholder="Emp Name" required/><br>
+        <label for="Mbl_No">Mobile No</label>
+        <input type="text" name="Mbl_No" placeholder="Emp MobileNo"><br>
+        <label for="email">Emp Email</label>
+        <input type="email" name="email" placeholder="Emp email"><br>
+        <label for="department">Emp department</label>
+        <input type="text" name="department" placeholder="Department"><br>
+
+        <input type="submit" value="submit" style="background-color: blue;">
+
+    </form>
+    <!-- {{data}} -->
+    <!-- <table border="all"style="border-collapse: collapse; text-align: center;width:100%;">
+        <tr>
+            <th>Emp_id</th>
+            <th>Name</th>
+            <th>MblNo</th>
+            <th>email</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            {%for i in value %}
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+        </tr>
+            {%endfor%}
+        <tr>
+            {%for k in data %}
+            <td>{{k.Name}}</td>
+            <td>{{k.Age}}</td>
+            <td>{{k.RollNo}}</td>
+            {%for m in k.Marks %}
+            <td>{{m}}</td>
+            {%endfor%}
+
+        </tr>
+        {%endfor%}
+    </table> -->
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style1.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylenav.css')}}">
+
+
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="{{url_for('login')}}">Login</a></li>
+    <li><a href="{{url_for('Signup')}}">Signup</a></li>
+    <li><a href="{{url_for('add')}}">Add</a></li>
+  </ul>
+
+<!-- partial:index.partial.html -->
+<div class="container">
+
+<form action="{{url_for('home')}}",method="post">
+  <p>Login form</p>
+  <div class="form-field">
+    <input type="text" placeholder="Email / Username" required name="username"/>
+  </div>
+  
+  <div class="form-field">
+    <input type="password" placeholder="Password" required name="password"/>
+   </div>
+  
+  <div class="form-field">
+    <!-- <button onclick="table()">Login</button>
+    <script>function table(){ window.location.href='/table';}</script> -->
+    <button type="submit" href="{{url_for('homes')}}" value="submit">Log in</button>
+  </div>
+  <p class="text--center">Not a member? <a href="{{url_for('Signup')}}">Sign up now</a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
+
+ </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
